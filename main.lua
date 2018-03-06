@@ -1,0 +1,5 @@
+-- Title: Animating Iages
+-- Name: Desmy Michaelis-Joseph
+-- Course: ICS2O/3C
+-- This program displays 3 images moving in different directions,
+--with some coloured text ana d background.
