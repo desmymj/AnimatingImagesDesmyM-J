@@ -8,13 +8,20 @@
 local backgroundimage = display.newImageRect("Images/background.jpg", 2048,1536)
 
 --local zombie 1
-local zombie1 = display.newImageRect("Images/zombie1.png", 100,100)
-local zombie2 = display.newImageRect("Images/zombie2.png", 100,100)
-local zombie3 = display.newImageRect("Images/zombie3.png", 100,100)
-local zombie4 = display.newImageRect("Images/zombie4.png", 100,100)
+local zombie1 = display.newImageRect("Images/zombie 1.png", 100,100)
+local zombie2 = display.newImageRect("Images/zombie 2.png", 100,100)
+local zombie3 = display.newImageRect("Images/zombie 3.png", 100,100)
+local zombie4 = display.newImageRect("Images/zombie 4.png", 100,100)
 
---set the x and y co/rdonates
-zombie1
+--set the x and y co-ordinates
+zombie1.x = 100
+zombie2.x = 500
+zombie3.x = 900
+zombie4.x = 500
+zombie1.y = 50
+zombie2.y = 500
+zombie3.y = 350
+zombie4.y = 500
 
 --makes the object opaque
 zombie2.alpha = 1
@@ -46,7 +53,7 @@ local function Movezombie1(event)
 zombie1.alpha = zombie1.alpha + 0.01
  
 --changes the direction when it reaches the end of the screen
- if(zombie1.y > 250) then 
+ if(zombie1.y > 600) then 
 	scrollSpeed1 = -3
  end
 
@@ -55,6 +62,8 @@ zombie1.alpha = zombie1.alpha + 0.01
  end
 if (zombie1.y > zombie4.y)then
 	attackText.isVisible = true
+end
+
 end
 
 --Function: Movezombie2
@@ -78,8 +87,6 @@ end
 	scrollSpeed2 = 4
  end
 
-end
-
 --Function: Movezombie3
 --Input: this function accepts an event listener
 --Output: none
@@ -101,8 +108,6 @@ end
 	scrollSpeed3 = 4
  end
 
-
-
 --Function: Movezombie4
 --Input: this function accepts an event listener
 --Output: none
@@ -114,13 +119,13 @@ zombie4.rotation = zombie4.rotation + 0.5
 end
 
 --movezombie1 will be called over and over again
-Runtime:addEventListener("enterFrame", movezombie1)
+Runtime:addEventListener("enterFrame", Movezombie1)
 
 --movezombie2 will be called over and over again
-Runtime:addEventListener("enterFrame", movezombie2)
+Runtime:addEventListener("enterFrame", Movezombie2)
 
 --movezombie3 will be called over and over again
-Runtime:addEventListener("enterFrame", movezombie3)
+Runtime:addEventListener("enterFrame", Movezombie3)
 
 --movezombie4 will be called over and over again
-Runtime:addEventListener("enterFrame", movezombie4)
+Runtime:addEventListener("enterFrame", Movezombie4)
