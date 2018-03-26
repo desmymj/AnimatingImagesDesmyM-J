@@ -102,6 +102,8 @@ end
 --changes the direction when it reaches the end of the screen
  if(zombie3.x > 250) then 
 	scrollSpeed3 = -3
+	zombie3.yScale = zombie3.yScale - 0.45
+	zombie3.yScale = zombie3.yScale + 0.25
  end
 
  if (zombie3.x < 85) then
